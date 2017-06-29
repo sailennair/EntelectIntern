@@ -39,11 +39,7 @@ namespace MediaTrackerTest1
                 db.Entry(exisiting).CurrentValues.SetValues(updated);
                 db.SaveChanges();
             }
-
-
         }
-
-
 
         public virtual void Delete(int key)
         {
@@ -57,13 +53,7 @@ namespace MediaTrackerTest1
                 db.SaveChanges();
             }
 
-
-
         }
-
-
-
-
 
     }
 }

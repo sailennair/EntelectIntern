@@ -32,13 +32,6 @@ namespace MediaTrackerTest1
                 db.SaveChanges();
 
             }
-
-
-
         }
-
-
-
-
     }
 }

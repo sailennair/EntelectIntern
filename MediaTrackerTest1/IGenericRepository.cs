@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace MediaTrackerTest1
 {
-  public  interface IGenericService<T>
-
-
+    public interface IGenericService<T>
     {
 
         IEnumerable<T> GetAll();
