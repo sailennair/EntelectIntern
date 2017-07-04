@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace MediaTrackerTest1
 {
-    public interface IEpisodesInterface : IGenericService<EpisodesTable>
+  public  interface IMovieTransitionInterface
     {
-       
 
-
+        IEnumerable<MovieTransitionTable> GetUserMovie(int userID);
 
 
     }

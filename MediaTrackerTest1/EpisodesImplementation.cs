@@ -6,11 +6,24 @@ using System.Threading.Tasks;
 
 namespace MediaTrackerTest1
 {
-    class EpisodesImplementation : GenericService<EpisodesTable>, IEpisodesInterface
+   public class EpisodesImplementation : GenericService<EpisodesTable>, IEpisodesInterface
     {
 
+       
+
+        public override void Delete(int episodeID)
+        {
+            var deleteQ = db.EpisodesTables.SingleOrDefault(x => x.EpisodesID == episodeID); 
+
+            if (deleteQ != null)
+            {
+                deleteQ.isDeleted = true;
+                deleteQ.SeriesTransitionTables.ToList().ForEach(x => x.isDeleted = true);
+                db.SaveChanges();
+            }
 
 
+        }
 
 
     }

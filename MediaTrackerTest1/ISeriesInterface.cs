@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace MediaTrackerTest1
 {
-    interface ISeriesInterface : IGenericService<SeriesTable>
+    public interface ISeriesInterface : IGenericService<SeriesTable>
     {
-
+        IEnumerable<EpisodesTable> GetAllEpisodes(int ID);
 
     }
 }

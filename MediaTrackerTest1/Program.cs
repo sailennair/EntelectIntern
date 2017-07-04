@@ -21,8 +21,6 @@ namespace MediaTrackerTest1
             container = new Container();
 
             // 2. Configure the container (register)
-
-
             //container.RegisterInitializer<SeriesImplementation>(handlerToInitialize => {
             //    handlerToInitialize.episodeImplementation = new EpisodesImplementation();
             //});
@@ -173,9 +171,10 @@ namespace MediaTrackerTest1
 
 
             //};
+           
 
             //episodeService.Create(newEpisode);
-       
+
 
             x.Delete(1);
 
@@ -196,11 +195,11 @@ namespace MediaTrackerTest1
             //    .Distinct()
             //    .ToList();
 
-            ////var test = from u in db.AppUserTables
-            ////join st in db.SeriesTransitionTables on u.UserID equals st.UserID
-            ////join ep in db.EpisodesTables on st.EpisodesID equals ep.EpisodesID
-            ////join s in db.SeriesTables on ep.SeriesID equals s.SeriesID
-            ////select new { s.SeriesID, u.UserID };
+            //var test = (from u in db.AppUserTables
+            //           join st in db.SeriesTransitionTables on u.UserID equals st.UserID
+            //           join ep in db.EpisodesTables on st.EpisodesID equals ep.EpisodesID
+            //           join s in db.SeriesTables on ep.SeriesID equals s.SeriesID
+            //           select new { s.SeriesName, u.Username }).Distinct().ToList();
 
             //var test2 = (from u in db.AppUserTables
             //           from st in db.SeriesTransitionTables.Where(x => x.UserID == u.UserID && !x.isDeleted)
@@ -211,7 +210,7 @@ namespace MediaTrackerTest1
 
 
 
-            //test2.ForEach(x => Console.WriteLine(x));
+            //test.ForEach(x => Console.WriteLine(x));
 
             Console.ReadLine();
 

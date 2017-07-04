@@ -55,5 +55,14 @@ namespace MediaTrackerTest1
 
         }
 
+        public virtual T GetByID(int key)
+        {
+
+            T findQ = db.Set<T>().Find(key);
+
+            return findQ;
+
+        }
+
     }
 }

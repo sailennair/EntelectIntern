@@ -11,8 +11,5 @@ namespace MediaTrackerTest1
     {
         [Required]
         public bool isDeleted { get; set; }
-
-
-
     }
 }

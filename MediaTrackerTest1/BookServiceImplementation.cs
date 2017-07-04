@@ -8,7 +8,16 @@ namespace MediaTrackerTest1
 {
    public class BookServiceImplementation : GenericService<BookTable>,IBookInterface
     {
+        public override void Update(BookTable updated, int key)
+        {
+            BookTable book= GetByID(key);
 
+            if (book != null)
+            {
+                book.BookName = updated.BookName;
+                db.SaveChanges();
+            }
+        }
 
     }
 }

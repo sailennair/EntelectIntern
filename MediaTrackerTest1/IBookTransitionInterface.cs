@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace MediaTrackerTest1
 {
-    public interface IEpisodesInterface : IGenericService<EpisodesTable>
+  public  interface IBookTransitionInterface
     {
-       
-
-
-
+        IEnumerable<BookTransitionTable> GetUserBook(int userID);
 
     }
 }

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace MediaTrackerTest1
 {
-    interface IMovieService : IGenericService<MovieTable>
+    public interface IMovieService : IGenericService<MovieTable>
     {
      
-        
+      
     }
 }

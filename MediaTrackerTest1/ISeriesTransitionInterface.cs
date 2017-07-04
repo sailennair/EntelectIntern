@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace MediaTrackerTest1
 {
-    public interface IEpisodesInterface : IGenericService<EpisodesTable>
+  public  interface ISeriesTransitionInterface
     {
-       
 
-
+        IEnumerable<SeriesTransitionTable> GetUserSeries(int UserID);
 
 
     }

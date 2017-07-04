@@ -13,6 +13,7 @@ namespace MediaTrackerTest1
         {
             episodeImplementation = _episodeImplementation;
         }
+
         public IEpisodesInterface episodeImplementation { get; set; }
 
         public override void Delete(int seriesID)
@@ -32,6 +33,17 @@ namespace MediaTrackerTest1
                 db.SaveChanges();
 
             }
+        }
+
+        public IEnumerable<EpisodesTable> GetAllEpisodes(int ID)
+        {
+            // EpisodesTable episodes = new EpisodesTable();
+
+            return db.EpisodesTables.Where(x => x.SeriesID == ID).ToList();
+
+         //   return episodes;
+
+                        
         }
     }
 }

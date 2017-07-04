@@ -15,6 +15,8 @@ namespace MediaTrackerTest1
 
         void Update(T entity, int key);
 
+        T GetByID(int key);
+
         void Delete(int ID);
 
     }
