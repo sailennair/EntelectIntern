@@ -8,7 +8,7 @@ namespace MediaTrackerTest1
 {
     public interface IEpisodesInterface : IGenericService<EpisodesTable>
     {
-
+       
 
 
 

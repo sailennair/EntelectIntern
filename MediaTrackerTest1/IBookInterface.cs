@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MediaTrackerTest1
 {
-    interface IBookInterface : IGenericService<BookTable>
+ public   interface IBookInterface : IGenericService<BookTable>
     {
 
     }

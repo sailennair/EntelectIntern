@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace MediaTrackerTest1
 {
-  public  interface IGenericService<T>
-
-
+    public interface IGenericService<T>
     {
 
         IEnumerable<T> GetAll();
@@ -16,6 +14,8 @@ namespace MediaTrackerTest1
         void Create(T entity);
 
         void Update(T entity, int key);
+
+        T GetByID(int key);
 
         void Delete(int ID);
 
