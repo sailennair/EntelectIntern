@@ -1,4 +1,4 @@
-namespace MediaTrackerTest1
+﻿namespace MediaTrackerTest1
 {
     using System;
     using System.Collections.Generic;
@@ -6,24 +6,24 @@ namespace MediaTrackerTest1
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("MovieTable")]
-    public partial class MovieTable : Entity
+    [Table("BookStatusTable")]
+    public partial class BookStatusTable
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public MovieTable()
+        public BookStatusTable()
         {
-            MovieTransitionTables = new HashSet<MovieTransitionTable>();
+            BookTransitionTables = new HashSet<BookTransitionTable>();
         }
 
         [Key]
-        public int MovieID { get; set; }
+        public int StatusID { get; set; }
 
         [Required]
-        public string MovieName { get; set; }
-
-        public string MoviePicture { get; set; }
+        public string Status { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<MovieTransitionTable> MovieTransitionTables { get; set; }
+        public virtual ICollection<BookTransitionTable> BookTransitionTables { get; set; }
+
+       
     }
 }

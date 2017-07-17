@@ -8,6 +8,7 @@ namespace MediaTrackerTest1
 {
  public   interface IBookInterface : IGenericService<BookTable>
     {
+        string GetBookIcon(int UserID);
 
     }
 }

@@ -61,6 +61,7 @@
     <Compile Include="AppUserService.cs" />
     <Compile Include="AppUserTable.cs" />
     <Compile Include="BookServiceImplementation.cs" />
+    <Compile Include="BookStatusTable.cs" />
     <Compile Include="BookTable.cs" />
     <Compile Include="BookTransitionImplementation.cs" />
     <Compile Include="BookTransitionTable.cs" />

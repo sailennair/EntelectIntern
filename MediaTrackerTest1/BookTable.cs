@@ -24,6 +24,13 @@ public partial class BookTable : Entity
         [Required]
         public string BookName { get; set; }
 
+        public string BookIcon { get; set; } 
+
+        [Required]
+        public bool isDeleted { get; set; }
+       
+        
+
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BookTransitionTable> BookTransitionTables { get; set; }

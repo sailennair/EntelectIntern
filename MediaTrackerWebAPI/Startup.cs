@@ -4,6 +4,7 @@ using System.Linq;
 using Microsoft.Owin;
 using Owin;
 
+
 [assembly: OwinStartup(typeof(MediaTrackerWebAPI.Startup))]
 
 namespace MediaTrackerWebAPI
@@ -12,6 +13,7 @@ namespace MediaTrackerWebAPI
     {
         public void Configuration(IAppBuilder app)
         {
+            app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
             ConfigureAuth(app);
         }
     }

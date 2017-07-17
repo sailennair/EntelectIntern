@@ -27,23 +27,22 @@ namespace MediaTrackerWebAPI.Controllers
         [Route("GetAll")]
         public IHttpActionResult GetAll()
         {
-            return Ok(bookService.GetAll().Select(x => new BookDto { BookName = x.BookName, BookID = x.BookID }));
+            return Ok(bookService.GetAll().Select(x => new BookDto { bookName = x.BookName, BookID = x.BookID, BookIconRef = x.BookIcon}));
         }
 
         [HttpGet]
-        [Route("{key}")]
+        [Route("{ID}")]
         public IHttpActionResult GetByID(int ID)
         {
             BookTable book = bookService.GetByID(ID);
             if (book != null)
             {
-                return Ok(new BookDto { BookName = book.BookName, BookID = book.BookID });
+                return Ok(new BookDto { bookName = book.BookName, BookID = book.BookID });
             }
             else
                 return BadRequest();
 
         }
-
 
         [HttpPost]
         public IHttpActionResult Create(BookTable book)
@@ -61,7 +60,6 @@ namespace MediaTrackerWebAPI.Controllers
             return Ok();
         }
 
-
         [HttpDelete]
         [Route("{key}")]
         public IHttpActionResult Delete(int key)
@@ -70,6 +68,8 @@ namespace MediaTrackerWebAPI.Controllers
             return Ok();
 
         }
+
+
 
 
 

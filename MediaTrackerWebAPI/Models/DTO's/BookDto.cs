@@ -8,8 +8,11 @@ namespace MediaTrackerWebAPI.Models.DTO_s
     public class BookDto
     {
 
-        public string BookName { get; set; }
+        public string bookName { get; set; }
 
         public int BookID { get; set; }
+        public string BookIconRef { get; set; }
+
+      //  public string BookStatus { get; set; }
     }
 }

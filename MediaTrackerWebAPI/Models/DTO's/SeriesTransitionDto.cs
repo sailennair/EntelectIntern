@@ -13,6 +13,7 @@ namespace MediaTrackerWebAPI.Models.DTO_s
         public int StatusID { get; set; }
         public string Status { get; set; }
         public int EpisodeID { get; set; }
+        public int Season { get; set; }
 
     }
 }

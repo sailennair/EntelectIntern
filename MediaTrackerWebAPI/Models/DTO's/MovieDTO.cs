@@ -10,5 +10,6 @@ namespace MediaTrackerWebAPI.Models.DTO_s
         public string MovieName { get; set; }
 
         public int MovieID { get; set; }
+        public string MoviePicture { get; set; }
     }
 }

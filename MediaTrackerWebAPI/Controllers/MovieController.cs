@@ -25,7 +25,7 @@ namespace MediaTrackerWebAPI.Controllers
         [Route("GetAll")]
         public IHttpActionResult GetAll()
         {
-            return Ok(movieService.GetAll().Select(x => new MovieDto { MovieName = x.MovieName, MovieID = x.MovieID }));
+            return Ok(movieService.GetAll().Select(x => new MovieDto { MovieName = x.MovieName, MovieID = x.MovieID , MoviePicture = x.MoviePicture}));
         }
 
         [HttpGet]

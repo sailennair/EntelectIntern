@@ -10,5 +10,11 @@ namespace MediaTrackerTest1
     {
         IEnumerable<BookTransitionTable> GetUserBook(int userID);
 
+        void UpdatestatusToRead(int BookID, int userID);
+        void UpdatestatusToBusyReading(int BookID, int userID);
+        void UpdatestatusToHaveNotRead(int BookID, int userID);
+        void addNew(int BookID, int userID);
+        void UpdateStatus(int BookID, int userID, int Status);
+        
     }
 }

@@ -60,7 +60,7 @@ namespace MediaTrackerTest1
             if (deleteQ != null)
             {
                 deleteQ.isDeleted = true;
-                deleteQ.BookTransitionTables.ToList().ForEach(x => x.isDeleted = true);
+               // deleteQ.BookTransitionTables.ToList().ForEach(x => x.isDeleted = true);
                 deleteQ.MovieTransitionTables.ToList().ForEach(x => x.isDeleted = true);
                 deleteQ.SeriesTransitionTables.ToList().ForEach(x => x.isDeleted = true);
                 db.SaveChanges();

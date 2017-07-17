@@ -15,6 +15,8 @@ namespace MediaTrackerTest1
             db = new Model1();
         }
 
+       // T genericInput = new T();
+
         public virtual IEnumerable<T> GetAll()
         {
             return db.Set<T>().Where(x => x.isDeleted == false);
@@ -23,6 +25,8 @@ namespace MediaTrackerTest1
 
         public virtual void Create(T genericInput)
         {
+            
+
             db.Set<T>().Add(genericInput);
             db.SaveChanges();
 

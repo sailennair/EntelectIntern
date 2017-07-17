@@ -24,6 +24,7 @@ namespace MediaTrackerTest1
 
         public virtual DbSet<SeriesTransitionTable> SeriesTransitionTables { get; set; }
         public virtual DbSet<EpisodesTable> EpisodesTables { get; set; }
+        public virtual DbSet<BookStatusTable> BookStatusTables { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

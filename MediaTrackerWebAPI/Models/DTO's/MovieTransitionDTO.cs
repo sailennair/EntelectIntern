@@ -7,10 +7,12 @@ namespace MediaTrackerWebAPI.Models.DTO_s
 {
     public class MovieTransitionDTO
     {
-        public int movieID { get; set; }
+        public int MovieID { get; set; }
         public int userID { get; set; }
         public int statusID { get; set; }
         public string MovieName { get; set; }
         public string Status { get; set; }
+        public string MoviePicture { get; set; }
+
     }
 }

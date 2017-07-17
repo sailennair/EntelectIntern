@@ -10,6 +10,8 @@ namespace MediaTrackerTest1
     {
 
         IEnumerable<MovieTransitionTable> GetUserMovie(int userID);
+        void addNew(int MovieID, int userID);
+        void UpdateStatus(int MovieID, int userID, int Status);
 
 
     }

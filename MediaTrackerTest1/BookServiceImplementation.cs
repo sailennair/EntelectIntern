@@ -19,6 +19,18 @@ namespace MediaTrackerTest1
             }
         }
 
+        public string GetBookIcon(int UserID)
+        {
+            BookTable book = GetByID(UserID);
+            if (book != null)
+            {
+                return book.BookIcon;
+
+            }
+            else return null;
+
+        }
+
     }
 }
 
