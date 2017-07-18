@@ -16,6 +16,7 @@ using Microsoft.Owin.Security.OAuth;
 using MediaTrackerWebAPI.Models;
 using MediaTrackerWebAPI.Providers;
 using MediaTrackerWebAPI.Results;
+using CorsApi;
 
 namespace MediaTrackerWebAPI.Controllers
 {

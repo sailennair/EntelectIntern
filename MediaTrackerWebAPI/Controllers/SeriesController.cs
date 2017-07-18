@@ -25,7 +25,7 @@ namespace MediaTrackerWebAPI.Controllers
         [HttpGet]
         public IHttpActionResult GetAll()
         {
-            return Ok(seriesServices.GetAll().Select(x => new SeriesDto { seriesName = x.SeriesName, seriesID = x.SeriesID }));
+            return Ok(seriesServices.GetAll().Select(x => new SeriesDto { SeriesName = x.SeriesName, SeriesID = x.SeriesID, SeriesPicture = x.SeriesPicture }));
 
 
         }
@@ -40,7 +40,7 @@ namespace MediaTrackerWebAPI.Controllers
 
             if (series != null)
             {
-                return Ok(new SeriesDto { seriesName = series.SeriesName, seriesID = series.SeriesID });
+                return Ok(new SeriesDto { SeriesName = series.SeriesName, SeriesID = series.SeriesID, SeriesPicture = series.SeriesPicture });
             }
             else
                 return null;
@@ -92,12 +92,6 @@ namespace MediaTrackerWebAPI.Controllers
             var episodes = seriesServices.GetAllEpisodes(key);
             return Ok(episodes.Select(x => new EpisodeDto { SeriesName = series.SeriesName, EpisodeID = x.EpisodesID, Season = x.Season ,SeriesID = x.SeriesID}));
         }
-
-
-
-
-
-
 
     }
 }

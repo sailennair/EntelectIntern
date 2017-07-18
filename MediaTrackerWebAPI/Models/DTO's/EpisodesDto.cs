@@ -5,11 +5,11 @@ using System.Web;
 
 namespace MediaTrackerWebAPI.Models.DTO_s
 {
-    public class SeriesDto
+    public class EpisodesDto
     {
-        public string SeriesName { get; set; }
+        public int EpisodeID { get; set; }
         public int SeriesID { get; set; }
-        public string SeriesPicture { get; set; }
-
+        public string SeriesName { get; set; }
+        
     }
 }

@@ -16,6 +16,7 @@ namespace MediaTrackerWebAPI.Providers
     public class ApplicationOAuthProvider : OAuthAuthorizationServerProvider
     {
         private readonly string _publicClientId;
+        private Func<UserManager<IdentityUser>> userManagerFactory;
 
         public ApplicationOAuthProvider(string publicClientId)
         {
@@ -25,6 +26,11 @@ namespace MediaTrackerWebAPI.Providers
             }
 
             _publicClientId = publicClientId;
+        }
+
+        public ApplicationOAuthProvider(string publicClientId, Func<UserManager<IdentityUser>> userManagerFactory) : this(publicClientId)
+        {
+            this.userManagerFactory = userManagerFactory;
         }
 
         public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)

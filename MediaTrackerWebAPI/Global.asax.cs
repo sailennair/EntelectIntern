@@ -38,8 +38,9 @@ namespace MediaTrackerWebAPI
             container.Register<IMovieTransitionInterface, MovieTransitionImplementation>(Lifestyle.Scoped);
             container.Register<IBookTransitionInterface, BookTransitionImplementation>(Lifestyle.Scoped);
             container.Register<ISeriesTransitionInterface, SeriesTransitionImplementation>(Lifestyle.Scoped);
+            container.Register<IAppUser, AppUserService>(Lifestyle.Scoped);
 
-           
+
             container.RegisterWebApiControllers(GlobalConfiguration.Configuration);
 
             container.Verify();

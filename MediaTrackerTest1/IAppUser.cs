@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MediaTrackerTest1
 {
-    interface IAppUser
+ public   interface IAppUser
     {
 
         IEnumerable<AppUserTable> GetAll();

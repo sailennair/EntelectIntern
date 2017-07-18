@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace MediaTrackerTest1
 {
-    class AppUserService : IAppUser
+   public class AppUserService : IAppUser
     {
 
 
         private Model1 db;
-
 
 
         public AppUserService()
@@ -23,13 +22,9 @@ namespace MediaTrackerTest1
         public IEnumerable<AppUserTable> GetAll()
         {
 
-
             var Q3 = db.AppUserTables.Where(mov => mov.isDeleted == false);
-
             return Q3.ToList();
-
         }
-
 
         public void Create(AppUserTable appUserTable)
         {
@@ -37,10 +32,6 @@ namespace MediaTrackerTest1
             db.SaveChanges();
 
         }
-
-
-
-
 
         public void Update(AppUserTable appUserTable)
         {
@@ -55,12 +46,12 @@ namespace MediaTrackerTest1
         public void Delete(int appUserID)
         {
 
-            var deleteQ = db.AppUserTables.SingleOrDefault(x => x.UserID == appUserID); //
+            var deleteQ = db.AppUserTables.SingleOrDefault(x => x.UserID == appUserID);
 
             if (deleteQ != null)
             {
                 deleteQ.isDeleted = true;
-               // deleteQ.BookTransitionTables.ToList().ForEach(x => x.isDeleted = true);
+                //  deleteQ.BookTransitionTables.ToList().ForEach(x => x.isDeleted = true);
                 deleteQ.MovieTransitionTables.ToList().ForEach(x => x.isDeleted = true);
                 deleteQ.SeriesTransitionTables.ToList().ForEach(x => x.isDeleted = true);
                 db.SaveChanges();

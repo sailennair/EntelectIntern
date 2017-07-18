@@ -21,6 +21,14 @@ namespace MediaTrackerTest1
             return (seriesList);
         }
 
+        public IEnumerable<SeriesTransitionTable> GetSeriesEpisodes(int SeriesID, int UserID)
+        {
+            var episodesList = db.SeriesTransitionTables.Where(x => x.UserID == UserID && x.EpisodesTable.SeriesID == SeriesID).ToList();
+            return (episodesList);
+        }
+
+
+
 
     }
 }

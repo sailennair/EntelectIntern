@@ -85,6 +85,10 @@
       <HintPath>..\packages\Microsoft.Owin.Cors.3.1.0\lib\net45\Microsoft.Owin.Cors.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Simple.Owin.Cors, Version=0.1.2.52227, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Simple.Owin.Cors.0.1.2.52227\lib\net45\Simple.Owin.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="SimpleInjector, Version=4.0.8.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
       <HintPath>..\packages\SimpleInjector.4.0.8\lib\net45\SimpleInjector.dll</HintPath>
       <Private>True</Private>
@@ -255,6 +259,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AppUserController.cs" />
     <Compile Include="Controllers\BookController.cs" />
     <Compile Include="Controllers\BookTransitionController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -269,9 +274,11 @@
     </Compile>
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\DTO%27s\AppUserDto.cs" />
     <Compile Include="Models\DTO%27s\BookDto.cs" />
     <Compile Include="Models\DTO%27s\BookTransitionDto.cs" />
     <Compile Include="Models\DTO%27s\EpisodeDto.cs" />
+    <Compile Include="Models\DTO%27s\EpisodesDto.cs" />
     <Compile Include="Models\DTO%27s\MovieDto.cs" />
     <Compile Include="Models\DTO%27s\MovieTransitionDTO.cs" />
     <Compile Include="Models\DTO%27s\SeriesDto.cs" />
@@ -345,6 +352,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Cores\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

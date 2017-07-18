@@ -24,6 +24,8 @@ namespace MediaTrackerTest1
         [Required]
         public string SeriesName { get; set; }
 
+        public string SeriesPicture { get; set; }
+
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<EpisodesTable> EpisodesTables { get; set; }

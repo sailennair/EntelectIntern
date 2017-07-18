@@ -17,10 +17,8 @@ namespace MediaTrackerTest1
 
         [Key]
         public int UserID { get; set; }
-
         [Required]
         public string Username { get; set; }
-
         [Required]
         public string Password { get; set; }
 
@@ -29,7 +27,6 @@ namespace MediaTrackerTest1
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MovieTransitionTable> MovieTransitionTables { get; set; }
         public virtual ICollection<BookTransitionTable> BookTransitionTables { get; set; }
-
         public virtual ICollection<SeriesTransitionTable> SeriesTransitionTables { get; set; }
     }
 }
