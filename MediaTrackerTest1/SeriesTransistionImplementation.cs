@@ -27,8 +27,28 @@ namespace MediaTrackerTest1
             return (episodesList);
         }
 
+        public void UpdateStatus(int EpisodeID, int userID, int Status)
+        {
+            SeriesTransitionTable series = db.SeriesTransitionTables.Where(x => x.UserID == userID).Where(x => x.EpisodesID == EpisodeID).Single();
+            series.StatusID = Status;
+            db.SaveChanges();
+
+        }
+
+        public IEnumerable<SeriesTransitionTable> getEpisodesWatched(int SeriesID, int UserID)
+        {
+            var series = db.SeriesTransitionTables.Where(x => x.UserID == UserID && x.EpisodesTable.SeriesID == SeriesID && x.StatusID == 1).ToList();
+            return (series);
+        }
 
 
+        //public void UpdateStatus(int MovieID, int userID, int Status)
+        //{
+        //    MovieTransitionTable movie = db.MovieTransitionTables.Where(x => x.UserID == userID).Where(x => x.MovieID == MovieID).Single();
+        //    movie.StatusID = Status;
+        //    db.SaveChanges();
+
+        //}
 
     }
 }

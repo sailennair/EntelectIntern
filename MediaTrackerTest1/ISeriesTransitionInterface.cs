@@ -12,6 +12,9 @@ namespace MediaTrackerTest1
         IEnumerable<SeriesTransitionTable> GetUserSeries(int UserID);
         IEnumerable<SeriesTransitionTable> GetSeriesEpisodes(int SeriesID, int UserID);
 
+        void UpdateStatus(int EpisodeID, int userID, int Status);
+        IEnumerable<SeriesTransitionTable> getEpisodesWatched(int SeriesID, int UserID);
+
 
 
     }
