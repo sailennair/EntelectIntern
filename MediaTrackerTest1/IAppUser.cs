@@ -17,5 +17,7 @@ namespace MediaTrackerTest1
 
         void Delete(int appUserID);
 
+        AppUserTable GetByID(int ID);
+
     }
 }

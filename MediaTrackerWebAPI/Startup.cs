@@ -6,6 +6,8 @@ using Owin;
 using Microsoft.Owin.Cors;
 using System.Web.Cors;
 using System.Threading.Tasks;
+using System.IdentityModel.Tokens;
+using System.Security.Claims;
 
 [assembly: OwinStartup(typeof(CorsApi.Startup))]
 

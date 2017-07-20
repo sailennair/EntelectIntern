@@ -8,7 +8,8 @@ namespace MediaTrackerWebAPI.Models.DTO_s
     public class AppUserDto
     {
 
-        public string userName { get; set; }
-
+        public string username { get; set; }
+        public int ID { get; set; }
+        public string password { get; set; }
     }
 }

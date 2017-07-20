@@ -15,13 +15,11 @@ namespace MediaTrackerWebAPI.Controllers
     public class BookController : ApiController
     {
 
-
         private readonly IBookInterface bookService;
         public BookController(IBookInterface bookService)
         {
             this.bookService = bookService;
         }
-
 
         [HttpGet]
         [Route("GetAll")]
@@ -41,7 +39,6 @@ namespace MediaTrackerWebAPI.Controllers
             }
             else
                 return BadRequest();
-
         }
 
         [HttpPost]
@@ -49,7 +46,6 @@ namespace MediaTrackerWebAPI.Controllers
         {
             bookService.Create(book);
             return Ok();
-
         }
 
         [HttpPut]
@@ -66,65 +62,7 @@ namespace MediaTrackerWebAPI.Controllers
         {
             bookService.Delete(key);
             return Ok();
-
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        //[HttpGet]
-        //public IHttpActionResult GetByID(int ID)
-        //{
-        //    MovieTable movie = movieService.GetByID(ID);
-
-        //    if (movie != null)
-        //    {
-        //        return Ok(new MovieDto { MovieName = movie.MovieName, MovieID = movie.MovieID });
-        //    }
-        //    else
-        //        return BadRequest();
-        //}
-
-
-
-        //[HttpPost]
-        //public IHttpActionResult Create(MovieTable movie)
-        //{
-        //    movieService.Create(movie);
-        //    return Ok();
-        //}
-
-
-        //[HttpDelete]
-        //[Route("{ID}")]
-        //public IHttpActionResult Delete(int ID)
-        //{
-        //    movieService.Delete(ID);
-        //    return Ok();
-        //}
-
-        //[HttpPut]
-        //[Route("{key}")]
-        //public IHttpActionResult Put(int key, [FromBody] MovieTable movie)
-        //{
-
-        //    movieService.Update(movie, key);
-        //    return Ok();
-        //}
-
-
 
     }
 }

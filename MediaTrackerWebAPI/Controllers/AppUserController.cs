@@ -20,6 +20,12 @@ namespace MediaTrackerWebAPI.Controllers
             this.appUserService = appUserService;
         }
 
+        [HttpGet]
+        public IHttpActionResult GetAll()
+        {
+            return Ok(appUserService.GetAll());
+        }
+
         [HttpPost]
         public IHttpActionResult addNewUser(AppUserTable appUser)
         {
@@ -34,6 +40,21 @@ namespace MediaTrackerWebAPI.Controllers
         {
             appUserService.Delete(ID);
             return Ok();
+        }
+
+        [HttpPut]
+        public IHttpActionResult updateUser(AppUserTable appUser)
+        {
+            appUserService.Update(appUser);
+            return Ok();
+        }
+
+        [HttpGet]
+        [Route ("{ID}")]
+        public IHttpActionResult GetUserByID(int ID)
+        {
+            AppUserTable item = appUserService.GetByID(ID);
+            return Ok(new AppUserDto { username = item.Username, password = item.Password, ID = item.UserID});
         }
 
 

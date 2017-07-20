@@ -30,10 +30,8 @@ namespace MediaTrackerTest1
             newElement.StatusID = 1;
             newElement.UserID = userID;
             newElement.isDeleted = false;
-            
             db.MovieTransitionTables.Add(newElement);
             db.SaveChanges();
-
         }
 
 
@@ -42,12 +40,7 @@ namespace MediaTrackerTest1
             MovieTransitionTable movie = db.MovieTransitionTables.Where(x => x.UserID == userID).Where(x => x.MovieID == MovieID).Single();
             movie.StatusID = Status;
             db.SaveChanges();
-
         }
-
-
-
-
 
     }
 }

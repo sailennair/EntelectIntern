@@ -24,7 +24,7 @@ namespace MediaTrackerWebAPI.Controllers
         [Route("{userID}")]
         public IHttpActionResult GetUserSeries(int userID)
         {
-            var seriesList = seriesTransitionInterface.GetUserSeries(userID).Select(x => new SeriesTransitionDto { SeriesID = x.EpisodesTable.SeriesID, SeriesName = x.EpisodesTable.SeriesTable.SeriesName, Status = x.StatusTable.Status, StatusID = x.StatusID, UserID = x.UserID, EpisodeID = x.EpisodesID, Season = x.EpisodesTable.Season, SeriesPicture = x.EpisodesTable.SeriesTable.SeriesPicture });
+            var seriesList = seriesTransitionInterface.GetUserSeries(userID).Select(x => new SeriesDto { SeriesID = x.EpisodesTable.SeriesID, SeriesName = x.EpisodesTable.SeriesTable.SeriesName, SeriesPicture = x.EpisodesTable.SeriesTable.SeriesPicture }).Distinct();
             var test = seriesList.Select(x => x.SeriesID).Distinct();
             return Ok(seriesList);
         }

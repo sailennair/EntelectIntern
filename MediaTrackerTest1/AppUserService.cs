@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MediaTrackerTest1
 {
-   public class AppUserService : IAppUser
+    public class AppUserService : IAppUser
     {
 
 
@@ -55,16 +55,15 @@ namespace MediaTrackerTest1
                 deleteQ.MovieTransitionTables.ToList().ForEach(x => x.isDeleted = true);
                 deleteQ.SeriesTransitionTables.ToList().ForEach(x => x.isDeleted = true);
                 db.SaveChanges();
-
             }
-
-
-
         }
 
-
-
-
+        public AppUserTable GetByID(int ID)
+        {
+            AppUserTable item = db.Set<AppUserTable>().Find(ID);
+             
+            return item;
+        }
     }
 
 
