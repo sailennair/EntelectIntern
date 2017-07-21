@@ -57,6 +57,14 @@ namespace MediaTrackerWebAPI.Controllers
             return Ok(new AppUserDto { username = item.Username, password = item.Password, ID = item.UserID});
         }
 
+        [HttpGet]
+        [Route("{username}/{password}")]
+        public IHttpActionResult checkValidLogin(string username, string password)
+        {
+            return Ok(appUserService.checkUsernameAndPassword(username, password));
+
+        }
+
 
 
     }

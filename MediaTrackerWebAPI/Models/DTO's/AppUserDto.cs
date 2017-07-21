@@ -11,5 +11,6 @@ namespace MediaTrackerWebAPI.Models.DTO_s
         public string username { get; set; }
         public int ID { get; set; }
         public string password { get; set; }
+        public bool isDetailsCorrect { get; set; }
     }
 }

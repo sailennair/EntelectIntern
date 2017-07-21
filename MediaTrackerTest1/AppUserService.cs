@@ -61,8 +61,25 @@ namespace MediaTrackerTest1
         public AppUserTable GetByID(int ID)
         {
             AppUserTable item = db.Set<AppUserTable>().Find(ID);
-             
+
             return item;
+        }
+
+
+        public bool checkUsernameAndPassword(string username, string password)
+        {
+
+
+
+            //if (item == null)
+            //{
+            //    return false;
+            //}
+            //else if (password == item.Password)
+            //{
+            //    return true;
+            //}
+            return false;
         }
     }
 

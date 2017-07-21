@@ -14,6 +14,5 @@ namespace MediaTrackerWebAPI.Models.DTO_s
         public int BookStatusID { get; set; }
         public string BookIconRef { get; set; }
 
-
     }
 }

@@ -19,5 +19,7 @@ namespace MediaTrackerTest1
 
         AppUserTable GetByID(int ID);
 
+        bool checkUsernameAndPassword(string username, string password);
+
     }
 }
